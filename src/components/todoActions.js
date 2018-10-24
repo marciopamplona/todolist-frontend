@@ -8,6 +8,8 @@ if (process.env.NODE_ENV === "production") {
   API = process.env.REACT_APP_API_URL;
 }
 
+console.log(process.env);
+
 const onError = (dispatch, error) => {
   dispatch({ type: "API_ERROR", payload: error });
   return error;
