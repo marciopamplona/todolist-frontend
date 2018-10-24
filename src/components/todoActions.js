@@ -3,7 +3,7 @@ import { List } from "immutable";
 
 let API;
 if (process.env.NODE_ENV === "production") {
-  API = process.env.API_URL;
+  API = process.env.REACT_APP_API_URL_PROD;
 } else {
   API = process.env.REACT_APP_API_URL;
 }
