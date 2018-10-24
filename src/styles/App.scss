@@ -1,0 +1,153 @@
+@import "mixin";
+
+body {
+  background-color: rgb(74, 152, 158);
+  margin: 0;
+  padding: 0;
+}
+
+.new-todo {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  @include box-shadow(4);
+
+  &__input {
+    flex: 1;
+    border: none;
+    height: 25px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background-color: grey;
+    border: 0;
+    margin: 4px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.todo-list {
+  margin: 0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  background-color: rgb(74, 152, 158);
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+
+  // @include box-shadow(2);
+
+  &__text {
+    flex: 1;
+    margin-bottom: 5px;
+  }
+
+  &__button {
+    width: 24px;
+    align-self: flex-start;
+    background-color: transparent;
+    border: 0;
+    margin: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.todo-list-container {
+  padding: 15px;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+.todo-list-header {
+  font-size: 20px;
+  font-weight: bold;
+  flex: 1;
+  margin-right: 15px;
+  cursor: pointer;
+
+  &__button {
+    background-color: grey;
+    border: 0;
+    margin: 4px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.todo-list-footer {
+  outline: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+
+  &__button {
+    outline: 0 !important;
+
+    width: 24px;
+    background-color: transparent;
+    border: 0;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  @include box-shadow(2);
+  margin: 10px;
+}
+
+.debugError {
+  color: rgb(255, 251, 0);
+  font-weight: bold;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.debugLabel {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
