@@ -1,12 +1,7 @@
 import axios from "axios";
 import { List } from "immutable";
 
-let API;
-if (process.env.NODE_ENV === "production") {
-  API = process.env.REACT_APP_API_URL_PROD;
-} else {
-  API = process.env.REACT_APP_API_URL;
-}
+const API = process.env.REACT_APP_API_URL;
 
 console.log(process.env);
 
