@@ -29,7 +29,8 @@ Libraries/frameworks/modules:
 - Global state management using 'Redux' and 'Immutable.js'
 - Data filtering and sorting using 'Reselect'
 - Browser offline state persistence using 'redux-storage'
-- API URL config in the '.env' file
+- API URL config in the '.env' file in development mode, in
+  production mode use the 'API_URL' env variable
 
 ### Author
 

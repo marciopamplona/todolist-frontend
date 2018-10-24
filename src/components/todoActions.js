@@ -1,7 +1,12 @@
 import axios from "axios";
 import { List } from "immutable";
 
-const API = process.env.REACT_APP_API_URL;
+let API;
+if (process.env.NODE_ENV === "production") {
+  API = process.env.API_URL;
+} else {
+  API = process.env.REACT_APP_API_URL;
+}
 
 const onError = (dispatch, error) => {
   dispatch({ type: "API_ERROR", payload: error });
